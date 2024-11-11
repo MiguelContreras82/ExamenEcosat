@@ -1,0 +1,1 @@
+Para realizer login los campos de usuario y contraseña solo requieren tener textos ya que no se esta usando algun servicio del login.
