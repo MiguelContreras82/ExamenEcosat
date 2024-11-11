@@ -4,3 +4,4 @@ Base de datos .bak en sql server
 
 pip install fastapi
 pip install uvicorn
+pip install SQLAlchemy
