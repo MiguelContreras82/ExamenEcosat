@@ -1,0 +1,6 @@
+Front desarrollado en Angular
+Back desarrollado en python con fastapi y uvicorn
+Base de datos .bak en sql server
+
+pip install fastapi
+pip install uvicorn

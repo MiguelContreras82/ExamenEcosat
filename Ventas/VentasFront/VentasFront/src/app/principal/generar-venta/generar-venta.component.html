@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap 5 Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="container-fluid mt-5 text-center" style="padding-left: 5%; padding-right: 5%;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-body">
+                <div class="alert alert-primary" style="font-size:120%; color: black; font-weight: 500;">
+                    Generar venta
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Productos</mat-label>
+                            <input #input type="text" placeholder="Seleccione una opcion" matInput
+                                [formControl]="prodControl" [matAutocomplete]="auto" (input)="filter()"
+                                (focus)="filter()">
+                            <mat-autocomplete requireSelection #auto="matAutocomplete"
+                                (optionSelected)="onSelectionChange($event)">
+                                @for (option of ProductosOptions; track option) {
+                                <mat-option [value]="option">{{option}}</mat-option>
+                                }
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Cantidad</mat-label>
+                            <input [(ngModel)]="canitdad" type="number" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4">
+                        <div style="margin: auto;width: 50%;padding: 10px;">
+                            <button (click)="agregar()" type="button" class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <mat-list>
+                            <ng-container *ngFor="let item  of listadoVenta ; index as i">
+                                <mat-list-item><strong>Producto:</strong> {{item.prodNombre}} <strong>Canitdad:</strong>
+                                    {{item.cantidad}} <strong>Precio Ind: </strong> {{item.precioIn}}.00 <button
+                                        (click)="borrar(i)" mat-mini-fab
+                                        aria-label="Example icon button with a home icon">
+                                        <mat-icon color="warn" aria-hidden="false"
+                                            aria-label="Example home icon">delete</mat-icon>
+                                    </button> </mat-list-item>
+                            </ng-container>
+                        </mat-list>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col md-5">
+                        <div style="margin: auto;width: 50%;padding: 10px;">
+                            <button (click)="guardar()"  type="button" class="btn btn-primary">Registrar venta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,68 @@
+nav ul {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.list-group-item {
+    background-color: rgb(104, 182, 101);
+    border-style: dashed;
+    border-radius: 15px;
+    border: 5px;
+    border-color: black;
+    color: white;
+    margin: 5px;
+}
+.list-group-item-pics {
+    background-color: rgb(101, 152, 182);
+    border-style: dashed;
+    border-radius: 15px;
+    border: 5px;
+    border-color: black;
+    color: white;
+    margin: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.list-group-item:hover {
+    background-color: rgb(95, 105, 109, 0.432);
+    cursor: pointer;
+}
+
+.list-group-item-pics:hover {
+    background-color: rgb(95, 105, 109, 0.432);
+    cursor: pointer;
+}
+
+.menu-primary {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4a5554;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
